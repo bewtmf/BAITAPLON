@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include<Windows.h>
-
-void Menu()
-{
-    //Phần này làm MENU.
-}
+#include<conio.h>
 
 void clrscr()
 {
@@ -43,4 +39,59 @@ void cursor(BOOL bVisible, DWORD dwSize)
 	ConsoleCursorInfor.bVisible = bVisible;
 	ConsoleCursorInfor.dwSize = dwSize;
 	SetConsoleCursorInfo(hConsoleOutput, &ConsoleCursorInfor);
+}
+
+void Menu(){
+	TextColor(10);
+	gotoxy(30, 1); printf("##    ## ######## ######## ######## ");
+	gotoxy(30, 2); printf("###   ## ##       ##       ##     ##");
+	gotoxy(30, 3); printf("####  ## ##       ##       ##     ##");
+    gotoxy(30, 4); printf("## ## ## ######   ######   ##     ##");
+    gotoxy(30, 5); printf("##  #### ##       ##       ##     ##");	
+	gotoxy(30, 6); printf("##   ### ##       ##       ##     ##");
+	gotoxy(30, 7); printf("##    ## ######## ######## ######## ");
+
+	TextColor(13);
+	gotoxy(1, 10); printf("########  #######  ######## ");
+	gotoxy(1, 11); printf("##       ##     ## ##     ##");
+	gotoxy(1, 12); printf("##       ##     ## ##     ##");
+	gotoxy(1, 13); printf("######   ##     ## ########");
+	gotoxy(1, 14); printf("##       ##     ## ##   ##");
+	gotoxy(1, 15); printf("##       ##     ## ##    ##");
+	gotoxy(1, 16); printf("##        #######  ##     ##");
+
+	TextColor(12);
+	gotoxy(40, 10); printf(" ######  ########  ######## ######## ######## ");
+	gotoxy(40, 11); printf("##    ## ##     ## ##       ##       ##     ##");
+	gotoxy(40, 12); printf("##       ##     ## ##       ##       ##     ## ");
+	gotoxy(40, 13); printf(" ######  ########  ######   ######   ##     ##");
+	gotoxy(40, 14); printf("      ## ##        ##       ##       ##     ##");
+	gotoxy(40, 15); printf("##    ## ##        ##       ##       ##     ##");
+	gotoxy(40, 16); printf(" ######  ##        ######## ######## ######## ");
+
+	gotoxy(20, 18); TextColor(10); printf("1. "); TextColor(15); printf("Start Game");
+	gotoxy(20, 20); TextColor(10); printf("2. "); TextColor(15); printf("Exit");
+
+}
+
+void gameover(){
+	TextColor(12);
+    gotoxy(60,10); printf(" ######  	   ###   	##     ##	######## ");
+    gotoxy(60,11); printf("##    ## 	  ## ##  	###   ###	##       ");
+    gotoxy(60,12); printf("##       	 ##   ## 	#### ####	##       ");
+    gotoxy(60,13); printf("##   ####	##     ##	## ### ##	######   ");
+	gotoxy(60,14); printf("##    ## 	#########	##     ##	##       ");
+	gotoxy(60,15); printf("##    ## 	##     ##	##     ##	##       ");
+	gotoxy(60,16); printf(" ######  	##     ##	##     ##	######## ");
+
+	gotoxy(60,18); printf(" ####### 	##     ##	######## 	######## ");
+	gotoxy(60,19); printf("##     ##	##     ##	##       	##     ##");
+	gotoxy(60,20); printf("##     ## 	##     ##	##       	##     ##");
+	gotoxy(60,21); printf("##     ## 	##     ##	######    	######## ");
+	gotoxy(60,22); printf("##     ##	 ##   ## 	##        	##   ##  ");
+	gotoxy(60,23); printf("##     ##	  ## ##  	##       	##    ## ");
+	gotoxy(60,24); printf(" ####### 	   ###   	######## 	##     ##");
+
+	gotoxy(55,26); printf("Press any key to back to menu");
+    getch();
 }
