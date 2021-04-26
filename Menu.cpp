@@ -70,7 +70,8 @@ void Menu(){
 	gotoxy(40, 16); printf(" ######  ##        ######## ######## ######## ");
 
 	gotoxy(20, 18); TextColor(10); printf("1. "); TextColor(15); printf("Start Game");
-	gotoxy(20, 20); TextColor(10); printf("2. "); TextColor(15); printf("Exit");
+	gotoxy(20, 19); TextColor(10); printf("2. "); TextColor(15); printf("Tutorial");
+	gotoxy(20, 20); TextColor(10); printf("3. "); TextColor(15); printf("Exit");
 
 }
 
@@ -91,7 +92,24 @@ void gameover(){
 	gotoxy(60,22); printf("##     ##	 ##   ## 	##        	##   ##  ");
 	gotoxy(60,23); printf("##     ##	  ## ##  	##       	##    ## ");
 	gotoxy(60,24); printf(" ####### 	   ###   	######## 	##     ##");
+	TextColor(14);
+	gotoxy(55,26); printf("Press 'ESC' to back to menu");
+}
 
-	gotoxy(55,26); printf("Press any key to back to menu");
-    getch();
+void Tutorial(){
+	TextColor(11);
+	gotoxy(5,2); printf("######## 	##     ##	######## 	 ####### 	######## 	#### 	   ###   	##       ");
+	gotoxy(5,3); printf("   ##    	##     ##	   ##   	##     ##	##     ##	 ##  	  ## ##  	##       ");
+	gotoxy(5,4); printf("   ##    	##     ##	   ##   	##     ##	##     ##	 ##  	 ##   ## 	##       ");
+	gotoxy(5,5); printf("   ##    	##     ##	   ##   	##     ##	######## 	 ##  	##     ##	##       ");
+	gotoxy(5,6); printf("   ##    	##     ##	   ##   	##     ##	##   ##  	 ##  	#########	##       ");
+	gotoxy(5,7); printf("   ##    	##     ##	   ##   	##     ##	##    ## 	 ##  	##     ##	##       ");
+	gotoxy(5,8); printf("   ##    	 ####### 	   ##   	 ####### 	##     ##	#### 	##     ##	######## ");
+
+	gotoxy(10, 15); TextColor(14); printf("%c\t%c: ", 27, 26);  TextColor(10); printf("Move");
+	gotoxy(10, 16); TextColor(14); printf("SPACEBAR: ");	TextColor(10); printf("Shoot bullet");
+	gotoxy(40, 15); TextColor(4); printf("‼‼");
+	gotoxy(40, 16); TextColor(4); printf("‼‼"); TextColor(10); printf(" = 2 POINTS");
+	gotoxy(40, 17); TextColor(4); printf("‼‼");
+	gotoxy(10, 18); TextColor(12); printf("Press 'ESC' to back to menu");
 }
